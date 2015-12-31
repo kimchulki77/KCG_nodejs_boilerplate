@@ -1,0 +1,88 @@
+<tr class="tr-section">
+    <td>
+        <%= oData.nCountTr %>
+        구역
+    </td>
+    <% if(oData.sPrintType == 'none'
+            || oData.sPrintType == undefined){ %>
+    <td>
+        <input name="start_time[]"
+               type="text"
+               class="input input-sm"
+               value="0">
+    </td>
+    <td>
+        <input name="end_time[]"
+               type="text"
+               class="input input-sm"
+               value="0">
+    </td>
+    <td>
+        <input name="quantity[]"
+               type="text"
+               class="input input-sm"
+               value="0">
+    </td>
+    <td>
+        <input name="ec[]"
+               type="text"
+               class="input input-sm"
+               value="0">
+    </td>
+    <td>
+        <input name=ph[]"
+               type="text"
+               class="input input-sm"
+               value="0">
+    </td>
+    <% }else if(oData.sPrintType == 'input'){ %>
+    <td>
+        <input name="start_time[]"
+               type="text"
+               class="input input-sm"
+               value="<%= oData.start_time %>">
+    </td>
+    <td>
+        <input name="end_time[]"
+               type="text"
+               class="input input-sm"
+               value="<%= oData.end_time %>">
+    </td>
+    <td>
+        <input name="quantity[]"
+               type="text"
+               class="input input-sm"
+               value="<%= oData.quantity %>">
+    </td>
+    <td>
+        <input name="ec[]"
+               type="text"
+               class="input input-sm"
+               value="<%= oData.ec %>">
+    </td>
+    <td>
+        <input name=ph[]"
+               type="text"
+               class="input input-sm"
+               value="<%= oData.ph %>">
+    </td>
+
+    <% }else if(oData.sPrintType == 'text'){ %>
+
+    <td>
+        <%= oData.start_time %>
+    </td>
+    <td>
+        <%= oData.end_time %>
+    </td>
+    <td>
+        <%= oData.quantity %>
+    </td>
+    <td>
+        <%= oData.ec %>
+    </td>
+    <td>
+        <%= oData.ph %>
+    </td>
+    <% } %>
+</tr>

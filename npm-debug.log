@@ -1,0 +1,649 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'scrypt' ]
+2 info using npm@2.14.3
+3 info using node@v4.0.0
+4 verbose install initial load of /Users/mac/PhpstormProjects/HDPlant_irrigation/package.json
+5 warn package.json HDPlant_irrigation@0.0.1 No README data
+6 warn package.json HDPlant_irrigation@0.0.1 license should be a valid SPDX license expression
+7 verbose installManyTop reading scoped package data from /Users/mac/PhpstormProjects/HDPlant_irrigation/node_modules/body-parser/package.json
+8 verbose installManyTop reading scoped package data from /Users/mac/PhpstormProjects/HDPlant_irrigation/node_modules/connect-flash/package.json
+9 verbose installManyTop reading scoped package data from /Users/mac/PhpstormProjects/HDPlant_irrigation/node_modules/connect-mongo/package.json
+10 verbose installManyTop reading scoped package data from /Users/mac/PhpstormProjects/HDPlant_irrigation/node_modules/cookie-parser/package.json
+11 verbose installManyTop reading scoped package data from /Users/mac/PhpstormProjects/HDPlant_irrigation/node_modules/ejs/package.json
+12 verbose installManyTop reading scoped package data from /Users/mac/PhpstormProjects/HDPlant_irrigation/node_modules/express/package.json
+13 verbose installManyTop reading scoped package data from /Users/mac/PhpstormProjects/HDPlant_irrigation/node_modules/express-session/package.json
+14 verbose installManyTop reading scoped package data from /Users/mac/PhpstormProjects/HDPlant_irrigation/node_modules/mongoose/package.json
+15 verbose installManyTop reading scoped package data from /Users/mac/PhpstormProjects/HDPlant_irrigation/node_modules/mysql/package.json
+16 verbose installManyTop reading scoped package data from /Users/mac/PhpstormProjects/HDPlant_irrigation/node_modules/node-crud/package.json
+17 verbose installManyTop reading scoped package data from /Users/mac/PhpstormProjects/HDPlant_irrigation/node_modules/node-gyp/package.json
+18 verbose installManyTop reading scoped package data from /Users/mac/PhpstormProjects/HDPlant_irrigation/node_modules/parse-url/package.json
+19 verbose installManyTop reading scoped package data from /Users/mac/PhpstormProjects/HDPlant_irrigation/node_modules/passport/package.json
+20 verbose installManyTop reading scoped package data from /Users/mac/PhpstormProjects/HDPlant_irrigation/node_modules/passport-facebook/package.json
+21 verbose installManyTop reading scoped package data from /Users/mac/PhpstormProjects/HDPlant_irrigation/node_modules/passport-local/package.json
+22 verbose installManyTop reading scoped package data from /Users/mac/PhpstormProjects/HDPlant_irrigation/node_modules/underscore-node/package.json
+23 info package.json node-crud@2.0.10 No license field.
+24 info package.json connect-flash@0.1.1 No license field.
+25 info package.json connect-mongo@0.8.2 No license field.
+26 info package.json passport-local@1.0.0 No license field.
+27 info package.json passport-facebook@2.0.0 No license field.
+28 info package.json parse-url@1.0.0 license should be a valid SPDX license expression
+29 verbose readDependencies loading dependencies from /Users/mac/PhpstormProjects/HDPlant_irrigation/package.json
+30 silly cache add args [ 'scrypt', null ]
+31 verbose cache add spec scrypt
+32 silly cache add parsed spec Result {
+32 silly cache add   raw: 'scrypt',
+32 silly cache add   scope: null,
+32 silly cache add   name: 'scrypt',
+32 silly cache add   rawSpec: '',
+32 silly cache add   spec: '*',
+32 silly cache add   type: 'range' }
+33 silly addNamed scrypt@*
+34 verbose addNamed "*" is a valid semver range for scrypt
+35 silly addNameRange { name: 'scrypt', range: '*', hasData: false }
+36 silly mapToRegistry name scrypt
+37 silly mapToRegistry using default registry
+38 silly mapToRegistry registry https://registry.npmjs.org/
+39 silly mapToRegistry uri https://registry.npmjs.org/scrypt
+40 verbose addNameRange registry:https://registry.npmjs.org/scrypt not in flight; fetching
+41 verbose request uri https://registry.npmjs.org/scrypt
+42 verbose request no auth needed
+43 info attempt registry request try #1 at 8:34:26 PM
+44 verbose request id 663fdec845fc428f
+45 verbose etag "EL2H7L526KLMX0BE0HC72GH1I"
+46 http request GET https://registry.npmjs.org/scrypt
+47 http 304 https://registry.npmjs.org/scrypt
+48 silly get cb [ 304,
+48 silly get   { date: 'Sun, 08 Nov 2015 11:33:09 GMT',
+48 silly get     via: '1.1 varnish',
+48 silly get     'cache-control': 'max-age=60',
+48 silly get     etag: '"EL2H7L526KLMX0BE0HC72GH1I"',
+48 silly get     age: '0',
+48 silly get     connection: 'keep-alive',
+48 silly get     'x-served-by': 'cache-sjc3134-SJC',
+48 silly get     'x-cache': 'MISS',
+48 silly get     'x-cache-hits': '0',
+48 silly get     'x-timer': 'S1446982389.573993,VS0,VE171',
+48 silly get     vary: 'Accept' } ]
+49 verbose etag https://registry.npmjs.org/scrypt from cache
+50 verbose get saving scrypt to /Users/mac/.npm/registry.npmjs.org/scrypt/.cache.json
+51 silly addNameRange number 2 { name: 'scrypt', range: '*', hasData: true }
+52 silly addNameRange versions [ 'scrypt',
+52 silly addNameRange   [ '1.0.0',
+52 silly addNameRange     '1.1.0',
+52 silly addNameRange     '1.2.0',
+52 silly addNameRange     '1.3.0',
+52 silly addNameRange     '1.3.1',
+52 silly addNameRange     '1.4.0',
+52 silly addNameRange     '1.4.1',
+52 silly addNameRange     '1.4.2',
+52 silly addNameRange     '1.5.0',
+52 silly addNameRange     '1.5.1',
+52 silly addNameRange     '1.5.2',
+52 silly addNameRange     '1.5.3',
+52 silly addNameRange     '1.6.0',
+52 silly addNameRange     '1.6.1',
+52 silly addNameRange     '1.6.2',
+52 silly addNameRange     '1.6.3',
+52 silly addNameRange     '1.7.0',
+52 silly addNameRange     '1.7.1',
+52 silly addNameRange     '1.7.2',
+52 silly addNameRange     '1.7.3',
+52 silly addNameRange     '1.7.4',
+52 silly addNameRange     '2.0.0',
+52 silly addNameRange     '2.0.2',
+52 silly addNameRange     '4.0.0',
+52 silly addNameRange     '4.0.1',
+52 silly addNameRange     '4.0.2',
+52 silly addNameRange     '4.0.3',
+52 silly addNameRange     '4.0.4',
+52 silly addNameRange     '4.0.5',
+52 silly addNameRange     '4.0.6',
+52 silly addNameRange     '4.0.7',
+52 silly addNameRange     '5.0.0',
+52 silly addNameRange     '5.1.0-0',
+52 silly addNameRange     '5.1.0',
+52 silly addNameRange     '5.1.1',
+52 silly addNameRange     '5.2.0',
+52 silly addNameRange     '5.3.0',
+52 silly addNameRange     '5.4.0',
+52 silly addNameRange     '5.4.1' ] ]
+53 silly addNamed scrypt@5.4.1
+54 verbose addNamed "5.4.1" is a plain semver version for scrypt
+55 silly cache afterAdd scrypt@5.4.1
+56 verbose afterAdd /Users/mac/.npm/scrypt/5.4.1/package/package.json not in flight; writing
+57 verbose afterAdd /Users/mac/.npm/scrypt/5.4.1/package/package.json written
+58 silly install resolved [ { name: 'scrypt',
+58 silly install resolved     description: 'The scrypt crypto library for NodeJS',
+58 silly install resolved     version: '5.4.1',
+58 silly install resolved     license: 'zlib',
+58 silly install resolved     keywords:
+58 silly install resolved      [ 'scrypt',
+58 silly install resolved        'password',
+58 silly install resolved        'auth',
+58 silly install resolved        'authentication',
+58 silly install resolved        'encryption',
+58 silly install resolved        'crypto',
+58 silly install resolved        'secret',
+58 silly install resolved        'key',
+58 silly install resolved        'secret key',
+58 silly install resolved        'hash',
+58 silly install resolved        'verify' ],
+58 silly install resolved     author:
+58 silly install resolved      { name: 'Barry Steyn',
+58 silly install resolved        email: 'barry.steyn@gmail.com',
+58 silly install resolved        url: 'http://doctrina.org' },
+58 silly install resolved     engines: { node: '>= 0.10' },
+58 silly install resolved     repository:
+58 silly install resolved      { type: 'git',
+58 silly install resolved        url: 'git+https://github.com/barrysteyn/node-scrypt.git' },
+58 silly install resolved     devDependencies: { mocha: '2.2.5', chai: '3.0.0', 'chai-as-promised': '^5.1.0' },
+58 silly install resolved     dependencies: { nan: '^2.0.8' },
+58 silly install resolved     licenses: [ [Object] ],
+58 silly install resolved     bugs: { url: 'https://github.com/barrysteyn/node-scrypt/issues' },
+58 silly install resolved     scripts:
+58 silly install resolved      { test: 'mocha tests/scrypt-tests.js',
+58 silly install resolved        install: 'node-gyp rebuild' },
+58 silly install resolved     gypfile: true,
+58 silly install resolved     gitHead: 'a1b8b52414feee13a3c2e080c201de792efe06a6',
+58 silly install resolved     homepage: 'https://github.com/barrysteyn/node-scrypt#readme',
+58 silly install resolved     _id: 'scrypt@5.4.1',
+58 silly install resolved     _shasum: 'ad9efdb0f61ac6b4ed68106c9baeaf7aace95f44',
+58 silly install resolved     _from: 'scrypt@*',
+58 silly install resolved     _npmVersion: '3.3.6',
+58 silly install resolved     _nodeVersion: '0.10.33',
+58 silly install resolved     _npmUser: { name: 'baz', email: 'barry.steyn@gmail.com' },
+58 silly install resolved     dist:
+58 silly install resolved      { shasum: 'ad9efdb0f61ac6b4ed68106c9baeaf7aace95f44',
+58 silly install resolved        tarball: 'http://registry.npmjs.org/scrypt/-/scrypt-5.4.1.tgz' },
+58 silly install resolved     maintainers: [ [Object] ],
+58 silly install resolved     directories: {},
+58 silly install resolved     _resolved: 'https://registry.npmjs.org/scrypt/-/scrypt-5.4.1.tgz',
+58 silly install resolved     readme: 'ERROR: No README data found!' } ]
+59 info install scrypt@5.4.1 into /Users/mac/PhpstormProjects/HDPlant_irrigation
+60 info installOne scrypt@5.4.1
+61 verbose installOne of scrypt to /Users/mac/PhpstormProjects/HDPlant_irrigation not in flight; installing
+62 verbose lock using /Users/mac/.npm/_locks/scrypt-3b3a53cb241ecafc.lock for /Users/mac/PhpstormProjects/HDPlant_irrigation/node_modules/scrypt
+63 silly install write writing scrypt 5.4.1 to /Users/mac/PhpstormProjects/HDPlant_irrigation/node_modules/scrypt
+64 verbose unbuild node_modules/scrypt
+65 silly gentlyRm /Users/mac/PhpstormProjects/HDPlant_irrigation/node_modules/scrypt is being purged from base /Users/mac/PhpstormProjects/HDPlant_irrigation
+66 verbose gentlyRm don't care about contents; nuking /Users/mac/PhpstormProjects/HDPlant_irrigation/node_modules/scrypt
+67 verbose tar unpack /Users/mac/.npm/scrypt/5.4.1/package.tgz
+68 verbose tar unpacking to /Users/mac/PhpstormProjects/HDPlant_irrigation/node_modules/scrypt
+69 silly gentlyRm /Users/mac/PhpstormProjects/HDPlant_irrigation/node_modules/scrypt is being purged
+70 verbose gentlyRm don't care about contents; nuking /Users/mac/PhpstormProjects/HDPlant_irrigation/node_modules/scrypt
+71 silly gunzTarPerm modes [ '755', '644' ]
+72 silly gunzTarPerm extractEntry package.json
+73 silly gunzTarPerm modified mode [ 'package.json', 436, 420 ]
+74 silly gunzTarPerm extractEntry .npmignore
+75 silly gunzTarPerm modified mode [ '.npmignore', 436, 420 ]
+76 silly gunzTarPerm extractEntry README.md
+77 silly gunzTarPerm modified mode [ 'README.md', 436, 420 ]
+78 silly gunzTarPerm extractEntry index.js
+79 silly gunzTarPerm modified mode [ 'index.js', 436, 420 ]
+80 silly gunzTarPerm extractEntry binding.gyp
+81 silly gunzTarPerm modified mode [ 'binding.gyp', 436, 420 ]
+82 silly gunzTarPerm extractEntry changelog.md
+83 silly gunzTarPerm modified mode [ 'changelog.md', 436, 420 ]
+84 silly gunzTarPerm extractEntry .travis.yml
+85 silly gunzTarPerm modified mode [ '.travis.yml', 436, 420 ]
+86 silly gunzTarPerm extractEntry src/node-boilerplate/inc/scrypt_async.h
+87 silly gunzTarPerm modified mode [ 'src/node-boilerplate/inc/scrypt_async.h', 436, 420 ]
+88 silly gunzTarPerm extractEntry src/node-boilerplate/inc/scrypt_common.h
+89 silly gunzTarPerm modified mode [ 'src/node-boilerplate/inc/scrypt_common.h', 436, 420 ]
+90 silly gunzTarPerm extractEntry src/node-boilerplate/inc/scrypt_hash_async.h
+91 silly gunzTarPerm modified mode [ 'src/node-boilerplate/inc/scrypt_hash_async.h', 436, 420 ]
+92 silly gunzTarPerm extractEntry src/node-boilerplate/inc/scrypt_kdf-verify_async.h
+93 silly gunzTarPerm modified mode [ 'src/node-boilerplate/inc/scrypt_kdf-verify_async.h',
+93 silly gunzTarPerm   436,
+93 silly gunzTarPerm   420 ]
+94 silly gunzTarPerm extractEntry src/node-boilerplate/inc/scrypt_kdf_async.h
+95 silly gunzTarPerm modified mode [ 'src/node-boilerplate/inc/scrypt_kdf_async.h', 436, 420 ]
+96 silly gunzTarPerm extractEntry src/node-boilerplate/inc/scrypt_params_async.h
+97 silly gunzTarPerm modified mode [ 'src/node-boilerplate/inc/scrypt_params_async.h', 436, 420 ]
+98 silly gunzTarPerm extractEntry src/node-boilerplate/scrypt_common.cc
+99 silly gunzTarPerm modified mode [ 'src/node-boilerplate/scrypt_common.cc', 436, 420 ]
+100 silly gunzTarPerm extractEntry src/node-boilerplate/scrypt_hash_async.cc
+101 silly gunzTarPerm modified mode [ 'src/node-boilerplate/scrypt_hash_async.cc', 436, 420 ]
+102 silly gunzTarPerm extractEntry src/node-boilerplate/scrypt_hash_sync.cc
+103 silly gunzTarPerm modified mode [ 'src/node-boilerplate/scrypt_hash_sync.cc', 436, 420 ]
+104 silly gunzTarPerm extractEntry src/node-boilerplate/scrypt_kdf-verify_async.cc
+105 silly gunzTarPerm modified mode [ 'src/node-boilerplate/scrypt_kdf-verify_async.cc', 436, 420 ]
+106 silly gunzTarPerm extractEntry src/node-boilerplate/scrypt_kdf-verify_sync.cc
+107 silly gunzTarPerm modified mode [ 'src/node-boilerplate/scrypt_kdf-verify_sync.cc', 436, 420 ]
+108 silly gunzTarPerm extractEntry src/node-boilerplate/scrypt_kdf_async.cc
+109 silly gunzTarPerm modified mode [ 'src/node-boilerplate/scrypt_kdf_async.cc', 436, 420 ]
+110 silly gunzTarPerm extractEntry src/node-boilerplate/scrypt_kdf_sync.cc
+111 silly gunzTarPerm modified mode [ 'src/node-boilerplate/scrypt_kdf_sync.cc', 436, 420 ]
+112 silly gunzTarPerm extractEntry src/node-boilerplate/scrypt_params_async.cc
+113 silly gunzTarPerm modified mode [ 'src/node-boilerplate/scrypt_params_async.cc', 436, 420 ]
+114 silly gunzTarPerm extractEntry src/node-boilerplate/scrypt_params_sync.cc
+115 silly gunzTarPerm modified mode [ 'src/node-boilerplate/scrypt_params_sync.cc', 436, 420 ]
+116 silly gunzTarPerm extractEntry src/scryptwrapper/hash.c
+117 silly gunzTarPerm modified mode [ 'src/scryptwrapper/hash.c', 436, 420 ]
+118 silly gunzTarPerm extractEntry src/scryptwrapper/inc/hash.h
+119 silly gunzTarPerm modified mode [ 'src/scryptwrapper/inc/hash.h', 436, 420 ]
+120 silly gunzTarPerm extractEntry src/scryptwrapper/inc/keyderivation.h
+121 silly gunzTarPerm modified mode [ 'src/scryptwrapper/inc/keyderivation.h', 436, 420 ]
+122 silly gunzTarPerm extractEntry src/scryptwrapper/inc/pickparams.h
+123 silly gunzTarPerm modified mode [ 'src/scryptwrapper/inc/pickparams.h', 436, 420 ]
+124 silly gunzTarPerm extractEntry src/scryptwrapper/keyderivation.c
+125 silly gunzTarPerm modified mode [ 'src/scryptwrapper/keyderivation.c', 436, 420 ]
+126 silly gunzTarPerm extractEntry src/scryptwrapper/pickparams.c
+127 silly gunzTarPerm modified mode [ 'src/scryptwrapper/pickparams.c', 436, 420 ]
+128 silly gunzTarPerm extractEntry src/util/salt.c
+129 silly gunzTarPerm modified mode [ 'src/util/salt.c', 436, 420 ]
+130 silly gunzTarPerm extractEntry src/util/salt.h
+131 silly gunzTarPerm modified mode [ 'src/util/salt.h', 436, 420 ]
+132 silly gunzTarPerm extractEntry scrypt/configuration/posix_configuration/Makefile.in
+133 silly gunzTarPerm modified mode [ 'scrypt/configuration/posix_configuration/Makefile.in',
+133 silly gunzTarPerm   436,
+133 silly gunzTarPerm   420 ]
+134 silly gunzTarPerm extractEntry scrypt/configuration/posix_configuration/config.aux/depcomp
+135 silly gunzTarPerm modified mode [ 'scrypt/configuration/posix_configuration/config.aux/depcomp',
+135 silly gunzTarPerm   509,
+135 silly gunzTarPerm   493 ]
+136 silly gunzTarPerm extractEntry scrypt/configuration/posix_configuration/config.aux/install-sh
+137 silly gunzTarPerm modified mode [ 'scrypt/configuration/posix_configuration/config.aux/install-sh',
+137 silly gunzTarPerm   509,
+137 silly gunzTarPerm   493 ]
+138 silly gunzTarPerm extractEntry scrypt/configuration/posix_configuration/config.aux/missing
+139 silly gunzTarPerm modified mode [ 'scrypt/configuration/posix_configuration/config.aux/missing',
+139 silly gunzTarPerm   509,
+139 silly gunzTarPerm   493 ]
+140 silly gunzTarPerm extractEntry scrypt/configuration/posix_configuration/config.h.in
+141 silly gunzTarPerm modified mode [ 'scrypt/configuration/posix_configuration/config.h.in',
+141 silly gunzTarPerm   436,
+141 silly gunzTarPerm   420 ]
+142 silly gunzTarPerm extractEntry scrypt/configuration/posix_configuration/configure
+143 silly gunzTarPerm modified mode [ 'scrypt/configuration/posix_configuration/configure',
+143 silly gunzTarPerm   509,
+143 silly gunzTarPerm   493 ]
+144 silly gunzTarPerm extractEntry scrypt/configuration/posixconfig
+145 silly gunzTarPerm modified mode [ 'scrypt/configuration/posixconfig', 509, 493 ]
+146 silly gunzTarPerm extractEntry scrypt/scrypt-1.1.6/lib/README
+147 silly gunzTarPerm modified mode [ 'scrypt/scrypt-1.1.6/lib/README', 436, 420 ]
+148 silly gunzTarPerm extractEntry scrypt/scrypt-1.1.6/lib/crypto/crypto_aesctr.c
+149 silly gunzTarPerm modified mode [ 'scrypt/scrypt-1.1.6/lib/crypto/crypto_aesctr.c', 436, 420 ]
+150 silly gunzTarPerm extractEntry scrypt/scrypt-1.1.6/lib/crypto/crypto_aesctr.h
+151 silly gunzTarPerm modified mode [ 'scrypt/scrypt-1.1.6/lib/crypto/crypto_aesctr.h', 436, 420 ]
+152 silly gunzTarPerm extractEntry scrypt/scrypt-1.1.6/lib/crypto/crypto_scrypt-nosse.c
+153 silly gunzTarPerm modified mode [ 'scrypt/scrypt-1.1.6/lib/crypto/crypto_scrypt-nosse.c',
+153 silly gunzTarPerm   436,
+153 silly gunzTarPerm   420 ]
+154 silly gunzTarPerm extractEntry scrypt/scrypt-1.1.6/lib/crypto/crypto_scrypt-ref.c
+155 silly gunzTarPerm modified mode [ 'scrypt/scrypt-1.1.6/lib/crypto/crypto_scrypt-ref.c',
+155 silly gunzTarPerm   436,
+155 silly gunzTarPerm   420 ]
+156 silly gunzTarPerm extractEntry scrypt/scrypt-1.1.6/lib/crypto/crypto_scrypt-sse.c
+157 silly gunzTarPerm modified mode [ 'scrypt/scrypt-1.1.6/lib/crypto/crypto_scrypt-sse.c',
+157 silly gunzTarPerm   436,
+157 silly gunzTarPerm   420 ]
+158 silly gunzTarPerm extractEntry scrypt/scrypt-1.1.6/lib/crypto/crypto_scrypt.h
+159 silly gunzTarPerm modified mode [ 'scrypt/scrypt-1.1.6/lib/crypto/crypto_scrypt.h', 436, 420 ]
+160 silly gunzTarPerm extractEntry scrypt/scrypt-1.1.6/lib/crypto/sha256.c
+161 silly gunzTarPerm modified mode [ 'scrypt/scrypt-1.1.6/lib/crypto/sha256.c', 436, 420 ]
+162 silly gunzTarPerm extractEntry scrypt/scrypt-1.1.6/lib/crypto/sha256.h
+163 silly gunzTarPerm modified mode [ 'scrypt/scrypt-1.1.6/lib/crypto/sha256.h', 436, 420 ]
+164 silly gunzTarPerm extractEntry scrypt/scrypt-1.1.6/lib/scryptenc/scryptenc.c
+165 silly gunzTarPerm modified mode [ 'scrypt/scrypt-1.1.6/lib/scryptenc/scryptenc.c', 436, 420 ]
+166 silly gunzTarPerm extractEntry scrypt/scrypt-1.1.6/lib/scryptenc/scryptenc.h
+167 silly gunzTarPerm modified mode [ 'scrypt/scrypt-1.1.6/lib/scryptenc/scryptenc.h', 436, 420 ]
+168 silly gunzTarPerm extractEntry scrypt/scrypt-1.1.6/lib/scryptenc/scryptenc_cpuperf.c
+169 silly gunzTarPerm modified mode [ 'scrypt/scrypt-1.1.6/lib/scryptenc/scryptenc_cpuperf.c',
+169 silly gunzTarPerm   436,
+169 silly gunzTarPerm   420 ]
+170 silly gunzTarPerm extractEntry scrypt/scrypt-1.1.6/lib/scryptenc/scryptenc_cpuperf.h
+171 silly gunzTarPerm modified mode [ 'scrypt/scrypt-1.1.6/lib/scryptenc/scryptenc_cpuperf.h',
+171 silly gunzTarPerm   436,
+171 silly gunzTarPerm   420 ]
+172 silly gunzTarPerm extractEntry scrypt/scrypt-1.1.6/lib/util/memlimit.c
+173 silly gunzTarPerm modified mode [ 'scrypt/scrypt-1.1.6/lib/util/memlimit.c', 436, 420 ]
+174 silly gunzTarPerm extractEntry scrypt/scrypt-1.1.6/lib/util/memlimit.h
+175 silly gunzTarPerm modified mode [ 'scrypt/scrypt-1.1.6/lib/util/memlimit.h', 436, 420 ]
+176 silly gunzTarPerm extractEntry scrypt/scrypt-1.1.6/lib/util/readpass.c
+177 silly gunzTarPerm modified mode [ 'scrypt/scrypt-1.1.6/lib/util/readpass.c', 436, 420 ]
+178 silly gunzTarPerm extractEntry scrypt/scrypt-1.1.6/lib/util/readpass.h
+179 silly gunzTarPerm modified mode [ 'scrypt/scrypt-1.1.6/lib/util/readpass.h', 436, 420 ]
+180 silly gunzTarPerm extractEntry scrypt/scrypt-1.1.6/lib/util/sysendian.h
+181 silly gunzTarPerm modified mode [ 'scrypt/scrypt-1.1.6/lib/util/sysendian.h', 436, 420 ]
+182 silly gunzTarPerm extractEntry scrypt/scrypt-1.1.6/lib/util/warn.c
+183 silly gunzTarPerm modified mode [ 'scrypt/scrypt-1.1.6/lib/util/warn.c', 436, 420 ]
+184 silly gunzTarPerm extractEntry scrypt/scrypt-1.1.6/lib/util/warn.h
+185 silly gunzTarPerm modified mode [ 'scrypt/scrypt-1.1.6/lib/util/warn.h', 436, 420 ]
+186 silly gunzTarPerm extractEntry scrypt/scrypt-1.1.6/scrypt_platform.h
+187 silly gunzTarPerm modified mode [ 'scrypt/scrypt-1.1.6/scrypt_platform.h', 436, 420 ]
+188 silly gunzTarPerm extractEntry scrypt/win/gettimeofday.c
+189 silly gunzTarPerm modified mode [ 'scrypt/win/gettimeofday.c', 436, 420 ]
+190 silly gunzTarPerm extractEntry scrypt/win/include/config.h
+191 silly gunzTarPerm modified mode [ 'scrypt/win/include/config.h', 436, 420 ]
+192 silly gunzTarPerm extractEntry scrypt/win/include/gettimeofday.h
+193 silly gunzTarPerm modified mode [ 'scrypt/win/include/gettimeofday.h', 436, 420 ]
+194 silly gunzTarPerm extractEntry scrypt/win/include/inttypes.h
+195 silly gunzTarPerm modified mode [ 'scrypt/win/include/inttypes.h', 436, 420 ]
+196 silly gunzTarPerm extractEntry scrypt/win/include/stdint.h
+197 silly gunzTarPerm modified mode [ 'scrypt/win/include/stdint.h', 436, 420 ]
+198 silly gunzTarPerm extractEntry scrypt/win/include/sys/mman.h
+199 silly gunzTarPerm modified mode [ 'scrypt/win/include/sys/mman.h', 436, 420 ]
+200 silly gunzTarPerm extractEntry scrypt/win/include/unistd.h
+201 silly gunzTarPerm modified mode [ 'scrypt/win/include/unistd.h', 436, 420 ]
+202 silly gunzTarPerm extractEntry scrypt/win/libs/openssl_32/libeay32.lib
+203 silly gunzTarPerm modified mode [ 'scrypt/win/libs/openssl_32/libeay32.lib', 436, 420 ]
+204 silly gunzTarPerm extractEntry scrypt/win/libs/openssl_64/libeay32.lib
+205 silly gunzTarPerm modified mode [ 'scrypt/win/libs/openssl_64/libeay32.lib', 436, 420 ]
+206 silly gunzTarPerm extractEntry scrypt/win/memlimit.c
+207 silly gunzTarPerm modified mode [ 'scrypt/win/memlimit.c', 436, 420 ]
+208 silly gunzTarPerm extractEntry scrypt/win/mman.c
+209 silly gunzTarPerm modified mode [ 'scrypt/win/mman.c', 436, 420 ]
+210 silly gunzTarPerm extractEntry scrypt_node.cc
+211 silly gunzTarPerm modified mode [ 'scrypt_node.cc', 436, 420 ]
+212 silly gunzTarPerm extractEntry tests/scrypt-tests.js
+213 silly gunzTarPerm modified mode [ 'tests/scrypt-tests.js', 436, 420 ]
+214 verbose write writing to /Users/mac/PhpstormProjects/HDPlant_irrigation/node_modules/scrypt/package.json
+215 info preinstall scrypt@5.4.1
+216 verbose readDependencies loading dependencies from /Users/mac/PhpstormProjects/HDPlant_irrigation/node_modules/scrypt/package.json
+217 silly prepareForInstallMany adding nan@^2.0.8 from scrypt dependencies
+218 verbose readDependencies loading dependencies from /Users/mac/PhpstormProjects/HDPlant_irrigation/node_modules/scrypt/package.json
+219 silly cache add args [ 'nan@^2.0.8', null ]
+220 verbose cache add spec nan@^2.0.8
+221 silly cache add parsed spec Result {
+221 silly cache add   raw: 'nan@^2.0.8',
+221 silly cache add   scope: null,
+221 silly cache add   name: 'nan',
+221 silly cache add   rawSpec: '^2.0.8',
+221 silly cache add   spec: '>=2.0.8 <3.0.0',
+221 silly cache add   type: 'range' }
+222 silly addNamed nan@>=2.0.8 <3.0.0
+223 verbose addNamed ">=2.0.8 <3.0.0" is a valid semver range for nan
+224 silly addNameRange { name: 'nan', range: '>=2.0.8 <3.0.0', hasData: false }
+225 silly mapToRegistry name nan
+226 silly mapToRegistry using default registry
+227 silly mapToRegistry registry https://registry.npmjs.org/
+228 silly mapToRegistry uri https://registry.npmjs.org/nan
+229 verbose addNameRange registry:https://registry.npmjs.org/nan not in flight; fetching
+230 verbose request uri https://registry.npmjs.org/nan
+231 verbose request no auth needed
+232 info attempt registry request try #1 at 8:34:28 PM
+233 verbose etag "CJ3ZKOY24CWA1LM0KQ4KE7PG1"
+234 http request GET https://registry.npmjs.org/nan
+235 http 304 https://registry.npmjs.org/nan
+236 silly get cb [ 304,
+236 silly get   { date: 'Sun, 08 Nov 2015 11:33:11 GMT',
+236 silly get     via: '1.1 varnish',
+236 silly get     'cache-control': 'max-age=60',
+236 silly get     etag: '"CJ3ZKOY24CWA1LM0KQ4KE7PG1"',
+236 silly get     age: '13',
+236 silly get     connection: 'keep-alive',
+236 silly get     'x-served-by': 'cache-sjc3124-SJC',
+236 silly get     'x-cache': 'HIT',
+236 silly get     'x-cache-hits': '1',
+236 silly get     'x-timer': 'S1446982391.485191,VS0,VE0',
+236 silly get     vary: 'Accept' } ]
+237 verbose etag https://registry.npmjs.org/nan from cache
+238 verbose get saving nan to /Users/mac/.npm/registry.npmjs.org/nan/.cache.json
+239 silly addNameRange number 2 { name: 'nan', range: '>=2.0.8 <3.0.0', hasData: true }
+240 silly addNameRange versions [ 'nan',
+240 silly addNameRange   [ '0.3.0-wip',
+240 silly addNameRange     '0.3.0-wip2',
+240 silly addNameRange     '0.3.0',
+240 silly addNameRange     '0.3.1',
+240 silly addNameRange     '0.3.2',
+240 silly addNameRange     '0.4.0',
+240 silly addNameRange     '0.4.1',
+240 silly addNameRange     '0.4.2',
+240 silly addNameRange     '0.4.3',
+240 silly addNameRange     '0.4.4',
+240 silly addNameRange     '0.5.0',
+240 silly addNameRange     '0.5.1',
+240 silly addNameRange     '0.5.2',
+240 silly addNameRange     '0.6.0',
+240 silly addNameRange     '0.7.0',
+240 silly addNameRange     '0.7.1',
+240 silly addNameRange     '0.8.0',
+240 silly addNameRange     '1.0.0',
+240 silly addNameRange     '1.1.0',
+240 silly addNameRange     '1.1.1',
+240 silly addNameRange     '1.1.2',
+240 silly addNameRange     '1.2.0',
+240 silly addNameRange     '1.3.0',
+240 silly addNameRange     '1.4.0',
+240 silly addNameRange     '1.4.1',
+240 silly addNameRange     '1.5.0',
+240 silly addNameRange     '1.4.2',
+240 silly addNameRange     '1.4.3',
+240 silly addNameRange     '1.5.1',
+240 silly addNameRange     '1.5.2',
+240 silly addNameRange     '1.6.0',
+240 silly addNameRange     '1.5.3',
+240 silly addNameRange     '1.6.1',
+240 silly addNameRange     '1.6.2',
+240 silly addNameRange     '1.7.0',
+240 silly addNameRange     '1.8.0',
+240 silly addNameRange     '1.8.1',
+240 silly addNameRange     '1.8.2',
+240 silly addNameRange     '1.8.3',
+240 silly addNameRange     '1.8.4',
+240 silly addNameRange     '1.9.0',
+240 silly addNameRange     '2.0.0',
+240 silly addNameRange     '2.0.1',
+240 silly addNameRange     '2.0.2',
+240 silly addNameRange     '2.0.3',
+240 silly addNameRange     '2.0.4',
+240 silly addNameRange     '2.0.5',
+240 silly addNameRange     '2.0.6',
+240 silly addNameRange     '2.0.7',
+240 silly addNameRange     '2.0.8',
+240 silly addNameRange     '2.0.9',
+240 silly addNameRange     '2.1.0' ] ]
+241 silly addNamed nan@2.1.0
+242 verbose addNamed "2.1.0" is a plain semver version for nan
+243 silly cache afterAdd nan@2.1.0
+244 verbose afterAdd /Users/mac/.npm/nan/2.1.0/package/package.json not in flight; writing
+245 verbose afterAdd /Users/mac/.npm/nan/2.1.0/package/package.json written
+246 silly install resolved [ { name: 'nan',
+246 silly install resolved     version: '2.1.0',
+246 silly install resolved     description: 'Native Abstractions for Node.js: C++ header for Node 0.8 -> 4 compatibility',
+246 silly install resolved     main: 'include_dirs.js',
+246 silly install resolved     repository: { type: 'git', url: 'git://github.com/nodejs/nan.git' },
+246 silly install resolved     scripts:
+246 silly install resolved      { test: 'tap --gc test/js/*-test.js',
+246 silly install resolved        'rebuild-tests': 'node-gyp rebuild --msvs_version=2013 --directory test',
+246 silly install resolved        docs: 'doc/.build.sh' },
+246 silly install resolved     contributors:
+246 silly install resolved      [ [Object],
+246 silly install resolved        [Object],
+246 silly install resolved        [Object],
+246 silly install resolved        [Object],
+246 silly install resolved        [Object],
+246 silly install resolved        [Object],
+246 silly install resolved        [Object] ],
+246 silly install resolved     devDependencies:
+246 silly install resolved      { bindings: '~1.2.1',
+246 silly install resolved        commander: '^2.8.1',
+246 silly install resolved        glob: '^5.0.14',
+246 silly install resolved        'node-gyp': '~3.0.1',
+246 silly install resolved        tap: '~0.7.1',
+246 silly install resolved        xtend: '~4.0.0' },
+246 silly install resolved     license: 'MIT',
+246 silly install resolved     bugs: { url: 'https://github.com/nodejs/nan/issues' },
+246 silly install resolved     homepage: 'https://github.com/nodejs/nan#readme',
+246 silly install resolved     _id: 'nan@2.1.0',
+246 silly install resolved     _shasum: '020a7ccedc63fdee85f85967d5607849e74abbe8',
+246 silly install resolved     _resolved: 'https://registry.npmjs.org/nan/-/nan-2.1.0.tgz',
+246 silly install resolved     _from: 'nan@>=2.0.8 <3.0.0',
+246 silly install resolved     _npmVersion: '3.3.5',
+246 silly install resolved     _nodeVersion: '4.1.2',
+246 silly install resolved     _npmUser: { name: 'kkoopa', email: 'bbyholm@abo.fi' },
+246 silly install resolved     dist:
+246 silly install resolved      { shasum: '020a7ccedc63fdee85f85967d5607849e74abbe8',
+246 silly install resolved        tarball: 'http://registry.npmjs.org/nan/-/nan-2.1.0.tgz' },
+246 silly install resolved     maintainers: [ [Object], [Object] ],
+246 silly install resolved     directories: {},
+246 silly install resolved     readme: 'ERROR: No README data found!' } ]
+247 info install nan@2.1.0 into /Users/mac/PhpstormProjects/HDPlant_irrigation/node_modules/scrypt
+248 info installOne nan@2.1.0
+249 verbose installOne of nan to /Users/mac/PhpstormProjects/HDPlant_irrigation/node_modules/scrypt not in flight; installing
+250 verbose lock using /Users/mac/.npm/_locks/nan-180b7a5fb46e1daa.lock for /Users/mac/PhpstormProjects/HDPlant_irrigation/node_modules/scrypt/node_modules/nan
+251 silly install write writing nan 2.1.0 to /Users/mac/PhpstormProjects/HDPlant_irrigation/node_modules/scrypt/node_modules/nan
+252 verbose unbuild node_modules/scrypt/node_modules/nan
+253 silly gentlyRm /Users/mac/PhpstormProjects/HDPlant_irrigation/node_modules/scrypt/node_modules/nan is being purged from base /Users/mac/PhpstormProjects/HDPlant_irrigation
+254 verbose gentlyRm don't care about contents; nuking /Users/mac/PhpstormProjects/HDPlant_irrigation/node_modules/scrypt/node_modules/nan
+255 verbose tar unpack /Users/mac/.npm/nan/2.1.0/package.tgz
+256 verbose tar unpacking to /Users/mac/PhpstormProjects/HDPlant_irrigation/node_modules/scrypt/node_modules/nan
+257 silly gentlyRm /Users/mac/PhpstormProjects/HDPlant_irrigation/node_modules/scrypt/node_modules/nan is being purged
+258 verbose gentlyRm don't care about contents; nuking /Users/mac/PhpstormProjects/HDPlant_irrigation/node_modules/scrypt/node_modules/nan
+259 silly gunzTarPerm modes [ '755', '644' ]
+260 silly gunzTarPerm extractEntry package.json
+261 silly gunzTarPerm modified mode [ 'package.json', 436, 420 ]
+262 silly gunzTarPerm extractEntry README.md
+263 silly gunzTarPerm modified mode [ 'README.md', 436, 420 ]
+264 silly gunzTarPerm extractEntry include_dirs.js
+265 silly gunzTarPerm modified mode [ 'include_dirs.js', 436, 420 ]
+266 silly gunzTarPerm extractEntry nan_converters.h
+267 silly gunzTarPerm modified mode [ 'nan_converters.h', 436, 420 ]
+268 silly gunzTarPerm extractEntry LICENSE.md
+269 silly gunzTarPerm modified mode [ 'LICENSE.md', 436, 420 ]
+270 silly gunzTarPerm extractEntry .dntrc
+271 silly gunzTarPerm modified mode [ '.dntrc', 436, 420 ]
+272 silly gunzTarPerm extractEntry appveyor.yml
+273 silly gunzTarPerm modified mode [ 'appveyor.yml', 436, 420 ]
+274 silly gunzTarPerm extractEntry doc/new.md
+275 silly gunzTarPerm modified mode [ 'doc/new.md', 436, 420 ]
+276 silly gunzTarPerm extractEntry doc/.build.sh
+277 silly gunzTarPerm modified mode [ 'doc/.build.sh', 509, 493 ]
+278 silly gunzTarPerm extractEntry doc/buffers.md
+279 silly gunzTarPerm modified mode [ 'doc/buffers.md', 436, 420 ]
+280 silly gunzTarPerm extractEntry doc/callback.md
+281 silly gunzTarPerm modified mode [ 'doc/callback.md', 436, 420 ]
+282 silly gunzTarPerm extractEntry doc/converters.md
+283 silly gunzTarPerm modified mode [ 'doc/converters.md', 436, 420 ]
+284 silly gunzTarPerm extractEntry doc/errors.md
+285 silly gunzTarPerm modified mode [ 'doc/errors.md', 436, 420 ]
+286 silly gunzTarPerm extractEntry doc/maybe_types.md
+287 silly gunzTarPerm modified mode [ 'doc/maybe_types.md', 436, 420 ]
+288 silly gunzTarPerm extractEntry doc/methods.md
+289 silly gunzTarPerm modified mode [ 'doc/methods.md', 436, 420 ]
+290 silly gunzTarPerm extractEntry doc/asyncworker.md
+291 silly gunzTarPerm modified mode [ 'doc/asyncworker.md', 436, 420 ]
+292 silly gunzTarPerm extractEntry doc/node_misc.md
+293 silly gunzTarPerm modified mode [ 'doc/node_misc.md', 436, 420 ]
+294 silly gunzTarPerm extractEntry doc/persistent.md
+295 silly gunzTarPerm modified mode [ 'doc/persistent.md', 436, 420 ]
+296 silly gunzTarPerm extractEntry doc/scopes.md
+297 silly gunzTarPerm modified mode [ 'doc/scopes.md', 436, 420 ]
+298 silly gunzTarPerm extractEntry doc/script.md
+299 silly gunzTarPerm modified mode [ 'doc/script.md', 436, 420 ]
+300 silly gunzTarPerm extractEntry doc/string_bytes.md
+301 silly gunzTarPerm modified mode [ 'doc/string_bytes.md', 436, 420 ]
+302 silly gunzTarPerm extractEntry doc/v8_internals.md
+303 silly gunzTarPerm modified mode [ 'doc/v8_internals.md', 436, 420 ]
+304 silly gunzTarPerm extractEntry doc/v8_misc.md
+305 silly gunzTarPerm modified mode [ 'doc/v8_misc.md', 436, 420 ]
+306 silly gunzTarPerm extractEntry nan.h
+307 silly gunzTarPerm modified mode [ 'nan.h', 436, 420 ]
+308 silly gunzTarPerm extractEntry nan_callbacks.h
+309 silly gunzTarPerm modified mode [ 'nan_callbacks.h', 436, 420 ]
+310 silly gunzTarPerm extractEntry nan_callbacks_12_inl.h
+311 silly gunzTarPerm modified mode [ 'nan_callbacks_12_inl.h', 436, 420 ]
+312 silly gunzTarPerm extractEntry nan_callbacks_pre_12_inl.h
+313 silly gunzTarPerm modified mode [ 'nan_callbacks_pre_12_inl.h', 436, 420 ]
+314 silly gunzTarPerm extractEntry nan_converters_43_inl.h
+315 silly gunzTarPerm modified mode [ 'nan_converters_43_inl.h', 436, 420 ]
+316 silly gunzTarPerm extractEntry nan_converters_pre_43_inl.h
+317 silly gunzTarPerm modified mode [ 'nan_converters_pre_43_inl.h', 436, 420 ]
+318 silly gunzTarPerm extractEntry nan_implementation_12_inl.h
+319 silly gunzTarPerm modified mode [ 'nan_implementation_12_inl.h', 436, 420 ]
+320 silly gunzTarPerm extractEntry nan_implementation_pre_12_inl.h
+321 silly gunzTarPerm modified mode [ 'nan_implementation_pre_12_inl.h', 436, 420 ]
+322 silly gunzTarPerm extractEntry nan_maybe_43_inl.h
+323 silly gunzTarPerm modified mode [ 'nan_maybe_43_inl.h', 436, 420 ]
+324 silly gunzTarPerm extractEntry nan_maybe_pre_43_inl.h
+325 silly gunzTarPerm modified mode [ 'nan_maybe_pre_43_inl.h', 436, 420 ]
+326 silly gunzTarPerm extractEntry nan_new.h
+327 silly gunzTarPerm modified mode [ 'nan_new.h', 436, 420 ]
+328 silly gunzTarPerm extractEntry nan_object_wrap.h
+329 silly gunzTarPerm modified mode [ 'nan_object_wrap.h', 436, 420 ]
+330 silly gunzTarPerm extractEntry nan_persistent_12_inl.h
+331 silly gunzTarPerm modified mode [ 'nan_persistent_12_inl.h', 436, 420 ]
+332 silly gunzTarPerm extractEntry nan_persistent_pre_12_inl.h
+333 silly gunzTarPerm modified mode [ 'nan_persistent_pre_12_inl.h', 436, 420 ]
+334 silly gunzTarPerm extractEntry nan_string_bytes.h
+335 silly gunzTarPerm modified mode [ 'nan_string_bytes.h', 436, 420 ]
+336 silly gunzTarPerm extractEntry nan_typedarray_contents.h
+337 silly gunzTarPerm modified mode [ 'nan_typedarray_contents.h', 436, 420 ]
+338 silly gunzTarPerm extractEntry nan_weak.h
+339 silly gunzTarPerm modified mode [ 'nan_weak.h', 436, 420 ]
+340 silly gunzTarPerm extractEntry CHANGELOG.md
+341 silly gunzTarPerm modified mode [ 'CHANGELOG.md', 436, 420 ]
+342 silly gunzTarPerm extractEntry tools/package.json
+343 silly gunzTarPerm modified mode [ 'tools/package.json', 436, 420 ]
+344 silly gunzTarPerm extractEntry tools/README.md
+345 silly gunzTarPerm modified mode [ 'tools/README.md', 436, 420 ]
+346 silly gunzTarPerm extractEntry tools/1to2.js
+347 silly gunzTarPerm modified mode [ 'tools/1to2.js', 509, 493 ]
+348 verbose write writing to /Users/mac/PhpstormProjects/HDPlant_irrigation/node_modules/scrypt/node_modules/nan/package.json
+349 info preinstall nan@2.1.0
+350 verbose readDependencies loading dependencies from /Users/mac/PhpstormProjects/HDPlant_irrigation/node_modules/scrypt/node_modules/nan/package.json
+351 verbose readDependencies loading dependencies from /Users/mac/PhpstormProjects/HDPlant_irrigation/node_modules/scrypt/node_modules/nan/package.json
+352 silly install resolved []
+353 verbose about to build /Users/mac/PhpstormProjects/HDPlant_irrigation/node_modules/scrypt/node_modules/nan
+354 info build /Users/mac/PhpstormProjects/HDPlant_irrigation/node_modules/scrypt/node_modules/nan
+355 info linkStuff nan@2.1.0
+356 silly linkStuff nan@2.1.0 has /Users/mac/PhpstormProjects/HDPlant_irrigation/node_modules/scrypt/node_modules as its parent node_modules
+357 verbose linkBins nan@2.1.0
+358 verbose linkMans nan@2.1.0
+359 verbose rebuildBundles nan@2.1.0
+360 info install nan@2.1.0
+361 info postinstall nan@2.1.0
+362 verbose unlock done using /Users/mac/.npm/_locks/nan-180b7a5fb46e1daa.lock for /Users/mac/PhpstormProjects/HDPlant_irrigation/node_modules/scrypt/node_modules/nan
+363 verbose about to build /Users/mac/PhpstormProjects/HDPlant_irrigation/node_modules/scrypt
+364 info build /Users/mac/PhpstormProjects/HDPlant_irrigation/node_modules/scrypt
+365 info linkStuff scrypt@5.4.1
+366 silly linkStuff scrypt@5.4.1 has /Users/mac/PhpstormProjects/HDPlant_irrigation/node_modules as its parent node_modules
+367 verbose linkBins scrypt@5.4.1
+368 verbose linkMans scrypt@5.4.1
+369 verbose rebuildBundles scrypt@5.4.1
+370 verbose rebuildBundles [ 'nan' ]
+371 info install scrypt@5.4.1
+372 verbose unsafe-perm in lifecycle true
+373 info scrypt@5.4.1 Failed to exec install script
+374 verbose unlock done using /Users/mac/.npm/_locks/scrypt-3b3a53cb241ecafc.lock for /Users/mac/PhpstormProjects/HDPlant_irrigation/node_modules/scrypt
+375 verbose stack Error: scrypt@5.4.1 install: `node-gyp rebuild`
+375 verbose stack Exit status 1
+375 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:214:16)
+375 verbose stack     at emitTwo (events.js:87:13)
+375 verbose stack     at EventEmitter.emit (events.js:172:7)
+375 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:24:14)
+375 verbose stack     at emitTwo (events.js:87:13)
+375 verbose stack     at ChildProcess.emit (events.js:172:7)
+375 verbose stack     at maybeClose (internal/child_process.js:817:16)
+375 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+376 verbose pkgid scrypt@5.4.1
+377 verbose cwd /Users/mac/PhpstormProjects/HDPlant_irrigation
+378 error Darwin 14.5.0
+379 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "scrypt"
+380 error node v4.0.0
+381 error npm  v2.14.3
+382 error code ELIFECYCLE
+383 error scrypt@5.4.1 install: `node-gyp rebuild`
+383 error Exit status 1
+384 error Failed at the scrypt@5.4.1 install script 'node-gyp rebuild'.
+384 error This is most likely a problem with the scrypt package,
+384 error not with npm itself.
+384 error Tell the author that this fails on your system:
+384 error     node-gyp rebuild
+384 error You can get their info via:
+384 error     npm owner ls scrypt
+384 error There is likely additional logging output above.
+385 verbose exit [ 1, true ]
+386 verbose unbuild node_modules/scrypt
+387 info preuninstall scrypt@5.4.1
+388 info uninstall scrypt@5.4.1
+389 verbose unbuild rmStuff scrypt@5.4.1 from /Users/mac/PhpstormProjects/HDPlant_irrigation/node_modules
+390 info postuninstall scrypt@5.4.1
+391 silly gentlyRm /Users/mac/PhpstormProjects/HDPlant_irrigation/node_modules/scrypt is being purged from base /Users/mac/PhpstormProjects/HDPlant_irrigation
+392 verbose gentlyRm don't care about contents; nuking /Users/mac/PhpstormProjects/HDPlant_irrigation/node_modules/scrypt
+393 silly vacuum-fs purging /Users/mac/PhpstormProjects/HDPlant_irrigation/node_modules/scrypt
+394 silly vacuum-fs quitting because other entries in /Users/mac/PhpstormProjects/HDPlant_irrigation/node_modules

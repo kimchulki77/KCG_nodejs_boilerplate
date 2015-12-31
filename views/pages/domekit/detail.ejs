@@ -1,0 +1,32 @@
+<% include header.ejs %>
+<div>
+    <div class="">
+        <div class="detail-description">
+            저희 상점의 다른 상품들을 한번에 구매 가능합니다!
+        </div>
+        <% for(var i = 0 ; i < products.length ; i++){ %>
+        <a class="wrap-image wrap-image-<%= i %>"
+           href="<%= products[i].url %>"
+           target="_blank">
+            <img src="<%= products[i].src %>">
+
+            <div class="company-logo">
+                도매키트
+            </div>
+
+            <div class="arduino-logo">
+                <img src="/img/arduino_logo.png">
+            </div>
+
+            <div class="title"><%= products[i].name %></div>
+        </a>
+        <% } %>
+    </div>
+
+    <div>
+        <a class="btn-more-items btn"
+           href="http://storefarm.naver.com/domekit"
+           target="_blank">도매키트 상품 더보기</a>
+    </div>
+</div>
+<% include footer.ejs %>
