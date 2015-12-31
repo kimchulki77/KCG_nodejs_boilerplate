@@ -1,14 +1,12 @@
-var MachineSettingLogController = require('./controllers/machine_supply_log_controller')
-    , MachineSettingController = require('./controllers/machine_setting_controller')
-    , MachineSupplySettingController = require('./controllers/machine_supply_setting_controller')
-    , MachineStatusController = require('./controllers/machine_status_controller')
-    , UserController = require('./controllers/user_controller');
+var UserController = require('./controllers/user_controller');
 
 var fs = require('fs');
 var http = require('http');
-//hello!!!!!!
+//hello!!
 
-// 이것이 테스트
+
+
+
 exports.route = function (app, passport) {
 
     var LocalStrategy = require('passport-local').Strategy;
@@ -19,30 +17,6 @@ exports.route = function (app, passport) {
         }
         , UserController.authenticate
     ));
-
-    app.get('/', MachineSettingController.getLastest);
-    app.post('/json/insertSetting', MachineSettingController.insertSetting);
-    app.put('/json/insertSetting', MachineSettingController.updateSetting);
-    app.get('/json/insertSetting', MachineSettingController.getSetting);
-
-    app.get('/setting', MachineSettingController.getSettingPage);
-    app.get('/json/setting', MachineSettingController.getSettingData);
-
-
-    app.post('/json/insertSupplySetting', MachineSupplySettingController.insertSupplySetting);
-    app.get('/json/getSupplySetting', MachineSupplySettingController.getAll);
-    app.get('/json/getSupplySetting/:id', MachineSupplySettingController.getById);
-    app.post('/json/deleteSupplySetting/:id', MachineSupplySettingController.deleteById);
-
-    app.post('/json/supplySetting', MachineSupplySettingController.insertSupplySetting);
-    app.get('/json/supplySetting', MachineSupplySettingController.getAll);
-    app.put('/json/supplySetting/:id', MachineSupplySettingController.deleteById);
-    app.delete('/json/supplySetting/:id', MachineSupplySettingController.deleteById);
-
-    app.get('/machineSupplyLog', MachineSettingLogController.getAllData);
-    app.get('/json/getSupplyLog/:date', MachineSettingLogController.getDataByDate);
-
-    app.get('/status', MachineStatusController.getAllData);
 
 // 인증 후, 사용자 정보를 Session에 저장함
     passport.serializeUser(function (user, done) {
@@ -57,6 +31,10 @@ exports.route = function (app, passport) {
 
         done(null, user);
         //});
+    });
+
+    app.get('/', function(req,res){
+
     });
 
     //region 로그인
