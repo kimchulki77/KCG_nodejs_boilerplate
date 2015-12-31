@@ -8,6 +8,7 @@ var fs = require('fs');
 var http = require('http');
 //hello!!!!!!
 
+// 이것이 테스트
 exports.route = function (app, passport) {
 
     var LocalStrategy = require('passport-local').Strategy;
