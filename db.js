@@ -11,7 +11,7 @@ var dbConnection = mysql.createConnection({
     database: 'HDPlant_irrigation',
     connectionLimit: 20,
     waitForConnections: false
-}); ㅋㅋㅋ
+});
 
 
 exports.connect = function () {
