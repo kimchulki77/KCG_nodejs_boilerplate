@@ -5,8 +5,6 @@ var http = require('http');
 //hello!!
 
 
-
-
 exports.route = function (app, passport) {
 
     var LocalStrategy = require('passport-local').Strategy;
@@ -17,6 +15,8 @@ exports.route = function (app, passport) {
         }
         , UserController.authenticate
     ));
+
+//    hlllllldsgsdggg
 
 // 인증 후, 사용자 정보를 Session에 저장함
     passport.serializeUser(function (user, done) {
