@@ -6,7 +6,7 @@ var MachineSettingLogController = require('./controllers/machine_supply_log_cont
 
 var fs = require('fs');
 var http = require('http');
-//hello commit
+//hello!!!!!!
 
 exports.route = function (app, passport) {
 
