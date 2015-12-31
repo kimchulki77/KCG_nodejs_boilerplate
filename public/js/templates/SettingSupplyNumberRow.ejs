@@ -1,0 +1,90 @@
+<% console.log('number init'); %>
+<!--row마다 ph, ec 등을 추가하기 위한 변수입니다.-->
+<% var nRow = 0; %>
+<% for (var j = 0; j < oData.supply_number.length; j++){ %>
+
+<div data-supply-number="<%= j + 1 %>"
+     class="supply-number">
+    <input type="hidden"
+           name="supply_number[]"
+           value="<%= j + 1 %>">
+
+    <div class="supply-number-title">
+        <%= j + 1 %> 회
+    </div>
+    <table class="table-section table-section-%s table table-striped table-responsive">
+        <input type="hidden"
+               name="supply_section"
+               value="<%= oData.supply_section[j] %>">
+        <thead>
+        <tr>
+
+            <th>
+                구역
+            </th>
+            <th>
+                공급시작 시각
+            </th>
+            <th>
+                공급종료 시각
+            </th>
+            <th>
+                공급량
+            </th>
+            <th>
+                공급 EC
+            </th>
+            <th>
+                공급 PH
+            </th>
+
+        </tr>
+        </thead>
+
+        <tbody>
+
+        <%
+            console.log('oData.supply_section[j]' + oData.supply_section[j]);
+        for(var k = 0 ; k < oData.supply_section[j] ; k++){
+        %>
+
+        <% var tplSectionRow = _.template(require('text!templates/SettingSupplySectionRow.ejs'));
+            <!--oData를 임시저장하기 위해 데이터를 복사합니다.-->
+            var oTempData = {};
+            _.extend(oTempData, oData); %>
+
+        <%
+            console.log("oData", JSON.stringify(oData));
+            for (var key in oData) {
+//                해당 타입이 배열일 경우 배열 한개씩 나올 수 있게 재수정합니다.
+                if (typeof oData[key] == 'object') {
+                    oTempData[key] = oData[key][nRow];
+                }
+            }
+        %>
+        <%= tplSectionRow({
+            oData: _.extend(oTempData, {nCountTr: k + 1})
+        }) %>
+        <% nRow++; %>
+        <% } %>
+        </tbody>
+
+    </table>
+    <!-- log 페이지에서는 구역추가 버튼을 추가하지 않습니다.-->
+    <% if(oData.sPrintType != 'text'){ %>
+    <div class="btn-group btn-group-justified"
+         role="group">
+        <a href="#"
+           class="btn-add-section  btn  btn-info">
+            구역 추가
+            <i class="glyphicon glyphicon-plus"></i>
+        </a>
+        <a href="#"
+           class="btn-remove-section btn  btn-info">
+            구역 제거
+            <i class="glyphicon glyphicon-minus"></i>
+        </a>
+    </div>
+    <% } %>
+</div>
+<% } %>

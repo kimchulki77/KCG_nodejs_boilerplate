@@ -1,0 +1,46 @@
+<%
+if(typeof aData == 'object' && _.isEmpty(aData) == false){
+%>
+<% var oDataValue
+        , sRegdt = '';
+%>
+<% for(var i = 0; i < aData.length; i++){ %>
+<%
+    oDataValue = aData[i].value;
+    sRegdt = aData[i].regdt;
+%>
+<div class="panel panel-default">
+    <div class="panel-heading"
+         role="tab"
+         id="heading<%= i %>">
+        <h4 class="panel-title">
+            <i class="glyphicon glyphicon-menu-down"></i>
+            <a class="collapsed"
+               role="button"
+               data-toggle="collapse"
+               data-parent="#accordionSupplyLog"
+               href="#collapse<%= i %>"
+               aria-expanded="false"
+               aria-controls="collapse<%= i %>">
+                <%= i + 1 %>회 - <%= moment(sRegdt).format("YYYY년 MM월 DD일 hh:mm:ss") %>
+            </a>
+        </h4>
+    </div>
+
+    <div id="collapse<%= i %>"
+         class="panel-collapse collapse "
+         role="tabpanel"
+         aria-labelledby="heading<%= i %>"
+         aria-expanded="false">
+        <div class="panel-body">
+            <%=
+                _.template(require('text!templates/SettingSupplyNumberRow.ejs'))({oData: _.extend(oDataValue, {sPrintType: 'text'})})
+            %>
+        </div>
+    </div>
+</div>
+<% } %>
+<% }else{ %>
+<div>해당 일자에 저장된 데이터가 없습니다.</div>
+<% } %>
+

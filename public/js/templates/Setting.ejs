@@ -1,0 +1,242 @@
+<!-- Nav tabs -->
+<ul class="nav nav-pills nav-justified"
+    role="tablist">
+    <li role="presentation"
+        class="active">
+        <a href="#home"
+           aria-controls="home"
+           role="tab"
+           data-toggle="tab">공급 기본 설정</a>
+    </li>
+    <li role="presentation">
+        <a href="#tabPanelSupplySetting"
+           aria-controls="profile"
+           role="tab"
+           data-toggle="tab">
+            공급 설정
+        </a>
+    </li>
+</ul>
+<!-- Tab panes -->
+<form id="formSetting1"
+      name="formSetting1"
+      method="post"
+      action="/setting">
+    <div class="tab-content">
+        <div role="tabpanel"
+             class="tab-pane active"
+             id="home">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <ul class='list-group'>
+                        <li class="list-group-item">
+                            <label for="firstTimeSupply">
+                                <a data-toggle="tooltip"
+                                   data-placement="bottom"
+                                   title="하루에 최대 공급량을 설정합니다.">
+                                    <i class="glyphicon glyphicon-question-sign">
+                                    </i>
+                                </a>
+                                최초 공급 시각
+                            </label>
+                                            <span style="float:right;">
+                                                <input id="firstTimeSupply"
+                                                       name="firstTimeSupply"
+                                                       class="input-sm"
+                                                       value="<%= oData.firstTimeSupply %>"
+                                                       type="text">
+                                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <label for="lastTimeSupply">
+                                <a data-toggle="tooltip"
+                                   data-placement="bottom"
+                                   title="하루에 최대 공급량을 설정합니다.">
+                                    <i class="glyphicon glyphicon-question-sign">
+                                    </i>
+                                </a>
+                                최종 공급 시각
+                            </label>
+                                            <span style="float:right;">
+                                                <input id="lastTimeSupply"
+                                                       name="lastTimeSupply"
+                                                       class="input-sm"
+                                                       value="<%= oData.lastTimeSupply %>"
+                                                       type="text">
+                                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <label for="radiation">
+                                <a data-toggle="tooltip"
+                                   data-placement="bottom"
+                                   title="하루에 최소 공급량을 설정합니다.">
+                                    <i class="glyphicon glyphicon-question-sign">
+                                    </i>
+                                </a>
+                                누적 일사량
+                            </label>
+                                            <span style="float:right;">
+                                                <input id="radiation"
+                                                       name="radiation"
+                                                       class="input-sm"
+                                                       value="<%= oData.radiation %>"
+                                                       type="text">
+                                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <label for="maxSupplyInDay">
+                                <a data-toggle="tooltip"
+                                   data-placement="bottom"
+                                   title="하루에 최대 공급량을 설정합니다.">
+                                    <i class="glyphicon glyphicon-question-sign">
+                                    </i>
+                                </a>
+                                1일 최대 공급량
+                            </label>
+                                            <span style="float:right;">
+                                                <input id="maxSupplyInDay"
+                                                       name="maxSupplyInDay"
+                                                       class="input-sm"
+                                                       value="<%= oData.maxSupplyInDay %>"
+                                                       type="text">cc
+                                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <label for="minSupplyInDay">
+                                <a data-toggle="tooltip"
+                                   data-placement="bottom"
+                                   title="하루에 최소 공급량을 설정합니다.">
+                                    <i class="glyphicon glyphicon-question-sign">
+                                    </i>
+                                </a>
+                                1일 최소 공급량
+                            </label>
+                                            <span style="float:right;">
+                                                <input id="minSupplyInDay"
+                                                       name="minSupplyInDay"
+                                                       class="input-sm"
+                                                       value="<%= oData.minSupplyInDay %>"
+                                                       type="text">cc
+                                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <label for="minSupplyInDay">
+                                <a data-toggle="tooltip"
+                                   data-placement="bottom"
+                                   title="물의 수온을 설정합니다.">
+                                    <i class="glyphicon glyphicon-question-sign">
+                                    </i>
+                                </a>
+                                수온
+                            </label>
+                                            <span style="float:right;">
+                                                <input id="waterTemp"
+                                                       name="waterTemp"
+                                                       class="input-sm"
+                                                       value="<%= oData.waterTemp %>"
+                                                       type="text">도
+                                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div role="tabpanel"
+             class="tab-pane"
+             id="tabPanelSupplySetting">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div>
+                        <input id="modeTime"
+                               type="radio"
+                               class="radio-inline"
+                               name="mode"
+                               value="time"
+                               checked="checked">
+                        <label for="modeTime">시간 설정</label>
+                    </div>
+                    <div class="btn-group btn-group-justified"
+                         role="group">
+                        <a href="#"
+                           id="btnAddSupply"
+                           class="btn  btn-danger">
+                            횟수 추가
+                            <i class="glyphicon glyphicon-plus"></i>
+                        </a>
+                        <a href="#"
+                           id="btnRemoveSupply"
+                           class="btn  btn-danger">
+                            횟수 제거
+                            <i class="glyphicon glyphicon-minus"></i>
+                        </a>
+                    </div>
+                    <%=
+                    _.template(require('text!templates/SettingSupplyNumberRow.ejs'))({oData: oData})
+                    %>
+
+                    <div id="supplyTimeWrap">
+
+                    </div>
+                    <input id="modeRadiation"
+                           type="radio"
+                           class="radio-inline"
+                           name="mode"
+                           value="radiation"> 누적 일사
+                    <div id="supplyRadiationWrap"
+                         class="hidden">
+                        <label for="modeRadiation">누적 일사량</label>
+                        <input type="text"
+                               id="supplyRadiation">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pull-right">
+        <input id="supplySettingTitle"
+               name="supplySettingTitle"
+               class="input-sm"
+               placeholder="제목을 입력하세요">
+        <a id="btnGetSupplySetting"
+           class="btn btn-warning btn-sm">설정 불러오기</a>
+        <a id='btnAddSupplySetting'
+           class="btn btn-danger btn-sm">설정 추가</a>
+    </div>
+    <div style="text-align:center; clear:both;">
+        <input id="btnSaveMachineSetting"
+               class="btn btn-warning"
+               type="submit"
+               value="저장">
+        <input id="btnRecoveryMachineSetting"
+               class="btn btn-info"
+               type="button"
+               value="복원">
+    </div>
+    <div id="modalSupplySetting"
+         class="modal fade"
+         tabindex="-1"
+         role="dialog"
+         aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button"
+                            class="close"
+                            data-dismiss="modal"
+                            aria-label="Close">
+                        <span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title"
+                        id="exampleModalLabel">저장 목록</h4>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button type="button"
+                            class="btn btn-default"
+                            data-dismiss="modal">닫기
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
