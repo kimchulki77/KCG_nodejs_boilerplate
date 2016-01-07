@@ -11,38 +11,38 @@
     , bodyParser = require("body-parser")
     , cookieParser = require('cookie-parser')
     , fs = require("fs")
-    , db = require('./db')
-//, config = require('./config')
+    , config = require('./config')
+    , db = require('./db').getInstance()
     , flash = require('connect-flash'); // session 관련해서 사용됨. 로그인 실패시 session등 클리어하는 기능으로 보임.
 
 var passport = require('passport');
 
-global.config = require('./config');
 
 db.connect();
 
+//region res.locals라는 곳에 데이터를 저장하여 공유가능합니다.
 app.use(function (req, res, next) {
     res.locals = {
-        siteTitle: "사이트제목",
-        pageTitle: "양액기계",
-        author: "김철기",
-        description: "양액기계입니다."
+        siteTitle: config.SITE_TITLE,
+        author: config.AUTHOR,
+        site_desc: config.SITE_DESC
     };
     next();
 });
+//endregion
 //region EXPRESS SETTING
 
 // 쿠키를 파싱합니다.
-app.use(cookieParser('mykye'));
+app.use(cookieParser(config.COOKIE_KEY));
 // post 나 get 을 사용하기 위해서 body부분을 파싱하기 위해 필요합니다.
 app.use(bodyParser.urlencoded());
 app.use(bodyParser.json());
 
 app.use(session({
-    secret: 'your_cookie_secret',
+    secret: config.SESSION_KEY,
     cookie: {
         // 기간을 12시간 유지
-        maxAge: 60 * 1000 * 60 * 12
+        maxAge: config.SESSION_AGE
     }
 }));
 app.use(passport.initialize());
@@ -56,7 +56,7 @@ app.set('view engine', 'ejs');
 
 routes.route(app, passport);
 
-var httpServer = server.listen(global.config.port, function () {
+var httpServer = server.listen(global.config.PORT, function () {
     console.log('Express server listening on port ' + server.address().port);
 });
 
