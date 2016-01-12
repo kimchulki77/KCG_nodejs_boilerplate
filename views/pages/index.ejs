@@ -1,36 +1,11 @@
 <% include ../header.ejs %>
-<%
-/*
- oMachineSetting:
- { _id: 19,
- value:
- { firstTimeSupply: '06:30:00',
- lastTimeSupply: '18:30:00',
- radiation: '25000',
- maxSupplyInDay: '10000',
- minSupplyInDay: '8000',
- section: [Object],
- sectionsupplytime: [Object],
- sectionsupplycc: [Object],
- EC: '5',
- PH: '8' },
- regdt: Thu Sep 10 2015 15:33:07 GMT+0900 (KST) }
- */
-%>
-<%
-var oMachineSettingValue= {};
-if(typeof oMachineSetting == 'object'){
-    oMachineSettingValue= oMachineSetting.value;
-    }
-%>
-<div class="panel"
-     style="display: inline-block;">
+<div class="panel">
     <ul class="nav nav-tabs"
         style="background: #eee;">
         <li class="active">
             <a href="/">센서</a>
         </li>
-        <li >
+        <li>
             <a href="/setting">설정</a>
         </li>
         <li>
@@ -40,78 +15,16 @@ if(typeof oMachineSetting == 'object'){
             <a href="/machineSupplyLog">통계</a>
         </li>
     </ul>
-    <section class=" in-envi">
-        <div>
-            <div>
-                현재 시각 <span id="dpTime"></span>
-            </div>
-            <div>
-                일출 시각
-                            <span id="sunrise">
+    <section class="home-container">
 
-                            </span>
-            </div>
-            <div>
-                일몰 시각
-                            <span id="sunset">
-
-                            </span>
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <!-- Default panel contents -->
-            <div class="panel-heading text-center">센서값</div>
-
-            <table class="table table-bordered table-responsive table-hover text-center">
-                <tr class="">
-                    <th>
-
-                    </th>
-                    <th>
-                        현재값
-                    </th>
-                    <th>
-                        설정값
-                    </th>
-                </tr>
-                <% var index = 0; %>
-                <% for(var key in oMachineSettingValue){ %>
-                <tr>
-                    <td><%= Object.keys(oMachineSettingValue)[index] %></td>
-                    <td>0</td>
-                    <td><%= oMachineSettingValue[key] %></td>
-                </tr>
-                <% index++; %>
-                <% } %>
-            </table>
-        </div>
     </section>
 </div>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"-->
+<!--&gt;</script>-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>-->
+<!--<script src="js/User.js">-->
+<!--</script>-->
 
-<script type="text/javascript">
-    setInterval("dpTime()", 1000);
-    function dpTime() {
-        var now = new Date();
-        hours = now.getHours();
-        minutes = now.getMinutes();
-        seconds = now.getSeconds();
 
-        if (hours > 12) {
-            hours -= 12;
-            ampm = "오후 ";
-        } else {
-            ampm = "오전 ";
-        }
-        if (hours < 10) {
-            hours = "0" + hours;
-        }
-        if (minutes < 10) {
-            minutes = "0" + minutes;
-        }
-        if (seconds < 10) {
-            seconds = "0" + seconds;
-        }
-        document.getElementById("dpTime").innerHTML = ampm + hours + ":" + minutes + ":" + seconds;
-    }
-</script>
 <% include ../footer.ejs %>

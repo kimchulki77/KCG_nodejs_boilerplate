@@ -12,13 +12,10 @@
     , cookieParser = require('cookie-parser')
     , fs = require("fs")
     , config = require('./config')
-    , db = require('./db').getInstance()
     , flash = require('connect-flash'); // session 관련해서 사용됨. 로그인 실패시 session등 클리어하는 기능으로 보임.
 
 var passport = require('passport');
 
-
-db.connect();
 
 //region res.locals라는 곳에 데이터를 저장하여 공유가능합니다.
 app.use(function (req, res, next) {
@@ -38,15 +35,13 @@ app.use(cookieParser(config.COOKIE_KEY));
 app.use(bodyParser.urlencoded());
 app.use(bodyParser.json());
 
-app.use(session({
-    secret: config.SESSION_KEY,
-    cookie: {
-        // 기간을 12시간 유지
-        maxAge: config.SESSION_AGE
-    }
-}));
+//app.use(session({
+//    secret: config.SESSION_KEY,
+//    cookie: {
+//        maxAge: config.SESSION_AGE
+//    }
+//}));
 app.use(passport.initialize());
-app.use(passport.session());
 app.use(flash());
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -56,7 +51,7 @@ app.set('view engine', 'ejs');
 
 routes.route(app, passport);
 
-var httpServer = server.listen(global.config.PORT, function () {
+var httpServer = server.listen(config.PORT, function () {
     console.log('Express server listening on port ' + server.address().port);
 });
 

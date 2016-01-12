@@ -117,7 +117,7 @@
                 32: 'space',
                 't': 84,
                 84: 't',
-                'delete': 46,
+                "remove": 46,
                 46: 'delete'
             },
             keyState = {},
@@ -2042,7 +2042,7 @@
             t: function () {
                 this.date(moment());
             },
-            'delete': function () {
+            "remove": function () {
                 this.clear();
             }
         },

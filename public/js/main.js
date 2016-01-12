@@ -43,23 +43,58 @@ requirejs.config({
         'bs_datetimepicker': 'lib/bootstrap/bootstrap-datetimepicker',
         'moment': 'lib/moment',
 
-        'App': 'app',
-        'AppView': 'views/App',
+        'config': 'config',
         'util': 'util',
         'plugins': 'plugins',
-        //'Router': 'router',
-        'SupplySettingCollection': 'collections/SupplySetting',
-        'SupplySettingModel': 'models/SupplySetting',
-        'SupplySettingView': 'views/SupplySetting',
 
-        'SupplySectionView': 'views/SupplySection'
+        //region Routers
+        'AppRouter': 'routers/AppRouter',
+        //endregion
+
+        //region collections
+        'UserController': 'controllers/UserController',
+        'TodoController': 'controllers/TodoController',
+
+        //endregion
+
+        //region Views
+        'UserListView': 'views/user/UserListView',
+        'UserEditView': 'views/user/UserEditView',
+        'UserView': 'views/user/UserView',
+
+        'TodoAppView': 'views/todo/TodoAppView',
+        'TodoEditView': 'views/todo/TodoEditView',
+        'TodoView': 'views/todo/TodoView',
+
+        'HomeView': 'views/HomeView',
+
+        'SupplySettingView': 'views/SupplySetting',
+        'SupplySectionView': 'views/SupplySection',
+        //endregion
+
+        //region collections
+        'UserCollection': 'collections/UserCollection',
+
+        'Todos': 'collections/Todos',
+
+        'SupplySettingCollection': 'collections/SupplySetting',
+        //endregion
+
+        //region Models
+        'User': 'models/User',
+        'Todo': 'models/Todo',
+
+        'SupplySettingModel': 'models/SupplySetting',
+        //endregion
+
+        'App': 'app',
     }
 });
 
+
 require([
     'App'
-    , 'routers/MobileRouter'
 ], function (App, MobileRouter) {
     //new MobileRouter;
-
+    App.start();
 });

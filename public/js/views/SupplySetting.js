@@ -9,8 +9,7 @@ define('SupplySettingView', [
     'SupplySettingCollection',
     'text!templates/SupplySetting_item.html'
 ], function ($, _, Backbone, collection, tpl) {
-    var TodoView = Backbone.View.extend({
-
+    return Backbone.View.extend({
         tagName: "li",
         className: 'list-group-item supply-setting-item',
 
@@ -23,6 +22,7 @@ define('SupplySettingView', [
 
         render: function () {
             this.$el.html(this.template(this.model.toJSON()));
+
             return this;
         },
         events: {
@@ -38,5 +38,4 @@ define('SupplySettingView', [
 
     });
 
-    return TodoView;
 });

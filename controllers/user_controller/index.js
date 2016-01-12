@@ -2,14 +2,14 @@
  * Created by mac on 15. 10. 28..
  */
 
-var User = require('../../models/user').User
+var User = require('../../models/User')
     , _ = require('underscore-node')
-    , pass = require('../../pass')
+    , user = new User()
+//, pass = require('../../pass')
     , util = require('util');
 
 //region PASSPORT 인증과 관련한 함수입니다.
 exports.authenticate = function (req, userId, userPw, done) {
-    var user = new User();
 
     user.getUserInfoById(userId, function (dbError, dbResult) {
         if (dbError) {
@@ -45,6 +45,58 @@ exports.ensureAuthenticated = function (req, res, next) {
     // 로그인이 안되어 있으면, login 페이지로 진행
     res.redirect('/login');
 };
+exports.getUsers = getUsers;
+function getUsers(req, res) {
+    user
+        .select()
+        .doQuery(function (dbErr, dbRes) {
+            if (dbErr) {
+                console.log(dbErr);
+                return;
+            }
+
+            res.send(dbRes);
+            res.end();
+        });
+}
+exports.getUser = getUser;
+function getUser(req, res) {
+    var id = req.params.id;
+
+    user
+        .select()
+        .setWhere({_id: id})
+        .doQuery(function (dbErr, dbRes) {
+            if (dbErr) {
+                res.end();
+                return;
+            }
+            console.log(dbRes);
+
+            res.send(dbRes);
+            res.end();
+        })
+}
+exports.updateUser = updateUser;
+function updateUser(req, res) {
+    var oBody = req.body;
+
+    user.update()
+        .setColumnAndValue({
+            nickname: oBody.nickname
+            , user_pw: oBody.user_pw
+            , user_id: oBody.user_id
+        })
+        .setWhere({_id: oBody._id})
+        .doQuery(function (dbErr, dbRes) {
+            if (dbErr) {
+                console.log(dbErr);
+                return;
+            }
+            res.send(dbRes);
+            res.end();
+        })
+}
 //endregion
 function getUserno(req, res, fn) {
     var userno = 0;
@@ -53,6 +105,7 @@ function getUserno(req, res, fn) {
         if (isLogin == true) {
             try {
                 userno = req.session.passport.user.userno;
+                fn(userno);
             } catch (e) {
                 console.log(e);
             }
@@ -61,7 +114,106 @@ function getUserno(req, res, fn) {
             res.redirect('/login');
         }
     });
-    fn(userno);
+}
+
+
+/*
+ * 회원정보를 받아옵니다.
+ * */
+function getUserInfo(userno, fn) {
+    isExistUser(userno, function (isExist) {
+        if (isExist == true) {
+            user
+                .select({
+                    COLUMN: 'userno, user_id, user_pw',
+                    WHERE: util.format('userno="%s"', userno)
+                })
+                .doQuery(fn);
+        } else {
+            console.log('존재 않함');
+        }
+    });
+}
+/*
+ * 회원정보를 받아옵니다.
+ * */
+function getUserById(userId, fn) {
+    isExistUserById(userId, function (isExist) {
+        if (isExist == true) {
+            console.log('user exist');
+            user
+                .select({
+                    COLUMN: 'userno, user_id, user_pw',
+                    WHERE: util.format('user_id="%s"', userId)
+                })
+                .doQuery(fn);
+        } else {
+            console.log('존재 않함');
+        }
+    });
+}
+/*
+ * 회원존재를 확인합니다.
+ */
+function isExistUser(userno, fn) {
+    user
+        .select({
+            COLUMN: 'userno',
+            WHERE: util.format('userno="%s"', userno)
+        })
+        .doQuery(
+            function (dbError, dbResult) {
+                //데이터가 존재하면
+                if (dbResult[0] != null) {
+                    console.log("회원 있다");
+                    fn(true);
+                } else {
+                    console.log("회원 없다");
+                    fn(false);
+                }
+            });
+}
+/*
+ * 회원존재를 확인합니다.
+ */
+function isExistUserById(userId, fn) {
+
+    user
+        .select({
+            COLUMN: 'userno',
+            WHERE: util.format('user_id="%s"', userId)
+        })
+        .doQuery(function (dbError, dbResult) {
+            //데이터가 존재하면
+            if (dbResult[0] != null) {
+                console.log("회원 있다");
+                fn(true);
+            } else {
+                console.log("회원 없다");
+                fn(false);
+            }
+        });
+}
+
+/*
+ * 회원을 생성합니다.
+ * */
+function createUser(oUser, fn) {
+    var that = this;
+
+    this.isExistUserById(oUser.user_id, function (isExist) {
+        if (isExist == true) {
+            console.log('아이디가 이미 존재하여 회원가입할 수 없습니다.');
+        } else {
+            console.log('아이디가 존재하지 않으므로 회원가입할 수 있습니다.');
+
+            queryMaker
+                .insert({
+                    COLUMN: util.format('user_id="%s", user_pw="%s"', oUser.user_id, oUser.user_pw)
+                })
+                .doQuery(fn);
+        }
+    });
 }
 
 exports.getUserno = getUserno;
@@ -104,8 +256,7 @@ exports.logout = function (req, res) {
 };
 
 function mypage(req, res) {
-    var user = new User()
-        , data = {};
+    var data = {};
 
     getUserno(req, res, function (userno) {
         user.getUserInfo(userno, function (dbError, dbResult) {
@@ -123,8 +274,7 @@ exports.join = function (req, res) {
 };
 
 exports.joinEnd = function (req, res) {
-    var user = new User()
-        , oUserInfo = req.body
+    var oUserInfo = req.body
         , oData;
     oUserInfo.user_pw = oUserInfo.user_pw;
 

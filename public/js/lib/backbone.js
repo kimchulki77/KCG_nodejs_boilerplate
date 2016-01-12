@@ -1,6 +1,3 @@
-/**
- * Created by mac on 15. 9. 24..
- */
 //     Backbone.js 1.2.3
 
 //     (c) 2010-2015 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
