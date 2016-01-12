@@ -1,0 +1,24 @@
+<div class="user">
+    <div class='col-md-4'>
+        <input type="text"
+               value="<%= user[config.COLUMN_USER_ID] %>"
+               class="input input-sm"
+               name="<%= config.COLUMN_USER_ID %>">
+    </div>
+    <div class='col-md-4'>
+        <input type="text"
+               value="<%= user[config.COLUMN_NICKNAME] %>"
+               class="input input-sm"
+               name="<%= config.COLUMN_NICKNAME %>">
+    </div>
+    <div class='col-md-4'>
+        <input type="text"
+               value="<%= user[config.COLUMN_USER_PW] %>"
+               class="input input-sm"
+               name="<%= config.COLUMN_USER_PW %>">
+    </div>
+    <input type="hidden"
+           value="<%= user[config.COLUMN_ID] %>"
+           class="input input-sm"
+           name="<%= config.COLUMN_ID %>">
+</div>

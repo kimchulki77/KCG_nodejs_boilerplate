@@ -1,0 +1,19 @@
+<div class='container'>
+    <a class="btn btn-edit btn-info"
+       href="/#/user/edit">수정</a>
+        <% for ( var i = 0; i < users.length ; i++ ){ %>
+    <div class='row user user-<%= users[i][config.COLUMN_USER_ID] %>' data-id='<%= users[i][config.COLUMN_USER_ID]%>'>
+
+        <div class='col-md-4'>
+            <%= users[i][config.COLUMN_USER_ID] %>
+        </div>
+        <div class='col-md-4'>
+            <%= users[i][config.COLUMN_NICKNAME]%>
+        </div>
+        <div class='col-md-4'>
+            <%= users[i][config.COLUMN_USER_PW] %>
+        </div>
+            </div>
+
+        <% } %>
+</div>
